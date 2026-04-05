@@ -32,6 +32,6 @@ guide for neoscript
   >, x, y; # skip y commands if x is greater than 0     #
   <, x, y; # skip y commands if x is lesser than 0      #
 
--------------------------------
-made by neofenixlive, version 1
--------------------------------
+--------------------
+made by neofenixlive
+--------------------
