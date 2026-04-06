@@ -3,11 +3,11 @@
 
 enum neo_commands { DF, AD, SB, ML, DV, JP, EQ, NE, GT, LT, O, I };
 typedef struct {
-  unsigned short ptr_c, prg_l, prg_c;
-  short *ptr_k, *ptr_v, *prg;
+  signed char *ptr_k, *ptr_v, *prg;
+  unsigned long ptr, prg_l, prg_c;
 } neo;
 
-short *neo_pointer(neo*, short);
+signed char *neo_pointer(neo*, signed char);
 neo *neo_create();
 void neo_delete(neo*);
 void neo_new_program(neo*, char*);
