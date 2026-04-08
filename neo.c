@@ -5,7 +5,7 @@
 
 neo *neo_create() {
   neo *n = malloc(sizeof(neo));
-  n->ptr = NULL;
+  n->ptr = calloc(1, 0xFF);
   n->prg = NULL;
   n->prg_l = 0;
   n->prg_c = 0;
@@ -83,7 +83,6 @@ void neo_new_program(neo *n, char *txt) {
 }
 
 void neo_run_program(neo *n) {
-  free(n->ptr); n->ptr = calloc(1, 0xFF);
   n->prg_c = 0;
   while(n->prg_c < n->prg_l) {
     signed char *ins    = &n->prg[n->prg_c];
