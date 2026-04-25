@@ -1,9 +1,9 @@
-#include "neo.h"
+#include "monte.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
-  FILE *scr; neo *n;
+  FILE *scr; monte *n;
   char *buf; unsigned long len;
   
   scr = fopen(argv[1], "rb");
@@ -16,10 +16,10 @@ int main(int argc, char** argv) {
   buf[len] = '\0';
   fclose(scr);
   
-  n = neo_create();
-  neo_new_program(n, buf);
-  neo_run_program(n);
-  neo_delete(n);
+  m = monte_create();
+  monte_new_program(m, buf);
+  monte_run_program(m);
+  monte_delete(m);
   
   free(buf);
   return 0;
