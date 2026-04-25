@@ -99,7 +99,7 @@ void monte_run_program(monte *m) {
       case SB: *dat[0] = *dat[0] - *dat[1]; break;
       case ML: *dat[0] = *dat[0] * *dat[1]; break;
       case DV: *dat[0] = *dat[0] / *dat[1]; break;
-      case JP: m->prg_c += *dat[0]*3-3;     break;
+      case JP: m->prg_c += *dat[0]*3-3;                  break;
       case EQ: if(*dat[0] == 0) m->prg_c += *dat[1]*3-3; break;
       case NE: if(*dat[0] != 0) m->prg_c += *dat[1]*3-3; break;
       case GT: if(*dat[0] > 0)  m->prg_c += *dat[1]*3-3; break;

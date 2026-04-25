@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
-  FILE *scr; monte *n;
+  FILE *scr; monte *m;
   char *buf; unsigned long len;
   
   scr = fopen(argv[1], "rb");
